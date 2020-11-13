@@ -14,8 +14,37 @@
     <title>Weather App 2.0</title>
   </head>
   <body>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <div class="container">
+      <div class="weather-wrap">
+        <h1>Seattle</h1>
+        <ul>
+          <li>Last updated ...</li>
+          <li>Rainy</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="Rainy"
+          />
+          °C | °F
+        </div>
 
+        <div class="col-4">
+          <ul>
+            <li>Precipitation: 80%</li>
+            <li>Wind: 6 km/h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <small>
+      <a href="https://github.com/sammjones/weather-app-2.0" target="_blank"
+        >Open-source code
+      </a>
+      by Sami Jones
+    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
