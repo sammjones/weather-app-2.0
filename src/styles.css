@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #78787f;
+  color: #68686e;
   font-size: 29px;
   font-weight: 100;
   line-height: 40px;
@@ -20,9 +20,13 @@ li {
   margin: 0;
   padding: 0;
   color: #78787f;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 100;
   line-height: 18px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 .weather-app {
@@ -37,4 +41,35 @@ li {
 .weather-app-container {
   max-width: 600px;
   margin: 30 auto;
+}
+
+.overview {
+  margin-bottom: 8px;
+}
+
+.weather-icon img {
+  margin-right: 10px;
+  height: 70px;
+  width: 70px;
+}
+
+.weather-icon strong {
+  color: rgb(35, 35, 35);
+  font-size: 62px;
+  font-weight: 400;
+}
+
+.weather-icon .units {
+  position: relative;
+  font-size: 16px;
+  top: -30px;
+}
+
+.weather-units .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-units .active:hover {
+  text-decoration: none;
 }
