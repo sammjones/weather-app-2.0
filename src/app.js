@@ -22,8 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
-
   let cityElement = document.querySelector("#city");
   let skystatusElement = document.querySelector("#skystatus");
   let windElement = document.querySelector("#wind");
@@ -45,8 +43,20 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "1768d882e21eece70a5c2f0f1301e790";
-let apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=1768d882e21eece70a5c2f0f1301e790&units=metric";
+function search(city) {
+  let apiKey = "1768d882e21eece70a5c2f0f1301e790";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Seattle");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
