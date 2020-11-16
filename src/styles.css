@@ -42,7 +42,7 @@ li:first-letter {
 
 .weather-app-container {
   max-width: 600px;
-  margin: 30 auto;
+  margin: 30px auto;
 }
 
 .overview {
